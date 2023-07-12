@@ -31,7 +31,7 @@ class _ProductState extends State<Product> {
               Expanded(
                 flex: 8,
                 child: CachedImage(
-                  url: widget.productDto.imageUrl,
+                  url: widget.productDto.imageUrl, height: 100,
                 ),
               ),
               Expanded(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_myntra_clone/common_widgets/cached_image.dart';
 import 'package:flutter_myntra_clone/data_provider/home_data.dart';
 import 'package:flutter_myntra_clone/utils/asset_constants.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
+import 'package:flutter_swiper_plus/flutter_swiper_plus.dart';
 
 class Home extends StatelessWidget {
 
@@ -12,7 +12,7 @@ class Home extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.onPrimary,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -35,25 +35,25 @@ class Home extends StatelessWidget {
                         icon: Icon(
                           Icons.search,
                           color: Colors.black,
-                        ),
+                        ), onPressed: () {  },
                       ),
                       IconButton(
                         icon: Icon(
                           Icons.notifications,
                           color: Colors.black,
-                        ),
+                        ), onPressed: () {  },
                       ),
                       IconButton(
                         icon: Icon(
                           Icons.favorite_border,
                           color: Colors.black,
-                        ),
+                        ), onPressed: () {  },
                       ),
                       IconButton(
                         icon: Icon(
                           Icons.shopping_bag_outlined,
                           color: Colors.black,
-                        ),
+                        ), onPressed: () {  },
                       ),
                     ],
                   ),
@@ -212,7 +212,7 @@ class Home extends StatelessWidget {
                           List<String> featuredBrands =
                               HomeData.getFeaturedBrands();
                           return CachedImage(
-                            url: featuredBrands[index],
+                            url: featuredBrands[index], height: 100,
                           );
                         },
                         autoplay: true,

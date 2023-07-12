@@ -9,7 +9,7 @@ class Categories extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsets.only(left: 10, bottom: 10),
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).colorScheme.secondary,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -31,13 +31,13 @@ class Categories extends StatelessWidget {
                       icon: Icon(
                         Icons.favorite_border,
                         color: Colors.black,
-                      ),
+                      ), onPressed: () {  },
                     ),
                     IconButton(
                       icon: Icon(
                         Icons.shopping_bag_outlined,
                         color: Colors.black,
-                      ),
+                      ), onPressed: () {  },
                     ),
                   ],
                 ),

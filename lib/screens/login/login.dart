@@ -13,14 +13,14 @@ class Login extends StatefulWidget {
 
 class _LoginState extends State<Login> {
   final _form = GlobalKey<FormState>();
-  int _mobileNumber;
+  late int _mobileNumber;
 
   void _validateAndLogin(BuildContext ctx) async {
-    final isValid = _form.currentState.validate();
+    final isValid = _form.currentState!.validate();
     if (!isValid) {
       return;
     }
-    _form.currentState.save();
+    _form.currentState!.save();
 
     Navigator.of(context)
         .pushNamed(Otp.routeName, arguments: _mobileNumber);
@@ -29,7 +29,7 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).accentColor,
+      backgroundColor: Theme.of(context).colorScheme.onPrimary,
       body: Builder(
         builder: (ctx) => SafeArea(
           child: SingleChildScrollView(
@@ -113,7 +113,7 @@ class _LoginState extends State<Login> {
                             validator: (value) =>
                                 validateMobileNumberInput(value),
                             onSaved: (value) {
-                              _mobileNumber = int.parse(value);
+                              _mobileNumber = int.parse(value!);
                             },
                           ),
                         ),
@@ -141,7 +141,7 @@ class _LoginState extends State<Login> {
     );
   }
 
-  String validateMobileNumberInput(value) {
+  String? validateMobileNumberInput(value) {
     if (value.isEmpty) {
       return 'Please enter a valid mobile number (10 digits)';
     }

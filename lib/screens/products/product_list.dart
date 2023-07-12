@@ -17,7 +17,7 @@ class ProductList extends StatelessWidget {
           children: [
             Container(
               padding: EdgeInsets.only(left: 10, top: 5),
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -50,19 +50,19 @@ class ProductList extends StatelessWidget {
                         icon: Icon(
                           Icons.search,
                           color: Colors.black,
-                        ),
+                        ), onPressed: () {  },
                       ),
                       IconButton(
                         icon: Icon(
                           Icons.favorite_border,
                           color: Colors.black,
-                        ),
+                        ), onPressed: () {  },
                       ),
                       IconButton(
                         icon: Icon(
                           Icons.shopping_bag_outlined,
                           color: Colors.black,
-                        ),
+                        ), onPressed: () {  },
                       ),
                     ],
                   ),

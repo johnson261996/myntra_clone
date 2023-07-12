@@ -1,7 +1,7 @@
 const base_url = 'https://constant.myntassets.com/pwa/assets/img';
 const banner_login_landing = '$base_url/banner_login_landing_500.jpg';
 const mobile_verification = '$base_url/3a438cb4-c9bf-4316-b60c-c63e40a1a96d1548071106233-mobile-verification.jpg';
-
+const welcome_img = "https://github-production-user-asset-6210df.s3.amazonaws.com/35655747/252867522-433d3547-f024-4a5e-aed9-c398df062a60.png";
 const free_shipping = 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/retaillabs/2020/5/14/c14657e8-862c-4d46-9a01-486e1d09da9c1589472209998-fs.jpg';
 const biggest_offers = 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2020/10/13/7befafbf-88bd-49a2-ab16-eec9c308de1a1602586181585-Home-page_02-06.jpg';
 const best_offers = 'https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/2020/10/13/8e881c4f-04fb-4198-b01f-84b52b29da5f1602586181497-Home-page_02-05.jpg';

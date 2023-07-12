@@ -16,17 +16,17 @@ class Otp extends StatefulWidget {
 
 class _OtpState extends State<Otp> {
   String _otp = "";
-  String _mobileNumber;
-  StreamController<ErrorAnimationType> errorController;
+  String? _mobileNumber;
+  StreamController<ErrorAnimationType>? errorController;
   bool hasError = false;
   final formKey = GlobalKey<FormState>();
   TextEditingController textEditingController = TextEditingController();
 
   void _validateAndSubmitOTP(BuildContext ctx) {
-    formKey.currentState.validate();
+    formKey.currentState!.validate();
 
     if (!_validateOtp()) {
-      errorController.add(ErrorAnimationType.shake);
+      errorController!.add(ErrorAnimationType.shake);
       setState(() {
         hasError = true;
       });
@@ -51,13 +51,13 @@ class _OtpState extends State<Otp> {
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    _mobileNumber = ModalRoute.of(context).settings.arguments.toString();
+    _mobileNumber = ModalRoute.of(context)!.settings.arguments.toString();
   }
 
   @override
   void dispose() {
     super.dispose();
-    errorController.close();
+    errorController!.close();
   }
 
   @override
@@ -143,7 +143,7 @@ class _OtpState extends State<Otp> {
                                   _validateAndSubmitOTP(ctx),
                               beforeTextPaste: (text) {
                                 return false;
-                              },
+                              }, appContext: context,
                             ),
                           ),
                         ),
